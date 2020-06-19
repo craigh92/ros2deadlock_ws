@@ -1,0 +1,7 @@
+{
+    "python.autoComplete.extraPaths": [
+    "/home/craig/ros2_foxy/install/rclpy/lib/python3.8/site-packages",
+    "/home/craig/ros2_foxy/install/std_msgs/lib/python3.8/site-packages/",
+    "/home/craig/ros2_foxy/install/std_srvs/lib/python3.8/site-packages/"
+    ]
+}
