@@ -20,3 +20,8 @@ Or
 ```
 ros2 run my_package my_node --exe=S
 ```
+
+Optional arguments
+```
+  --d          Print a debug message at the start and end of every spin
+```

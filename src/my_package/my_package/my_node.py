@@ -17,6 +17,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--exe', choices=['M','S'], required=True,
         help='The Executor to use. M for MultiThreaded or S for SingleThreaded')
+    parser.add_argument('--d', action='store_true',
+        help='Print a debug message at the start and end of every spin')
+
     args = parser.parse_args()
 
     rclpy.init()
@@ -50,7 +53,15 @@ def main():
     exe.add_node(subnode)
 
     future_msgs.add_done_callback(lambda fut : print("Future is done"))
-    exe.spin_until_future_complete(future_msgs)
+    
+    if args.d:
+        while future_msgs.done() is False:
+            print('------ Begin Spin')
+            exe.spin_once()
+            print('------ End Spin')
+    else:
+        exe.spin_until_future_complete(future_msgs)
+
 
     print("Goodbye!")
 
