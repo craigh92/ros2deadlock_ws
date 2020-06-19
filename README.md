@@ -1,5 +1,7 @@
 # ros2deadlock_ws
 
+ROS Answers Question: https://answers.ros.org/question/355325/why-do-i-get-deadlock-when-setting-a-future-in-a-subscription-callback-only-with-multithreadedexecutor-rclpy/
+
 ### Quick Start
 
 Build:
